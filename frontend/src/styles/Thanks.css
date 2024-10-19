@@ -1,0 +1,74 @@
+/* Container styling */
+.order-placed-container {
+    background-color: #f9fff6; /* Light green */
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Header section with cart and close button */
+  .order-placed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* Close button */
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Order placed message */
+  .order-placed-body h1 {
+    color: #4CAF50; /* Darker green for heading */
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .order-placed-body h2 {
+    color: #4CAF50;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  /* Image styling */
+  .order-placed-img {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+  }
+  
+  /* Paragraph styling */
+  .order-placed-body p {
+    color: #4CAF50;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  /* Continue shopping button */
+  .continue-shopping-btn {
+    background-color: #2f4f2f;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .continue-shopping-btn:hover {
+    background-color: #388E3C; /* Slightly darker on hover */
+  }
+  

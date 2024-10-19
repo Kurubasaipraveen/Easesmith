@@ -1,0 +1,140 @@
+/* Footer Section Styles */
+.footer {
+    background-color: #edf5e1;
+    padding: 40px 20px; /* Adjusted padding for better responsiveness */
+    color: #333;
+    font-family: Arial, sans-serif;
+    height: 70vh;
+    background-size: cover;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    padding: 0 20px; /* Reduced horizontal padding for smaller screens */
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 15px;
+    min-width: 220px;
+    margin-bottom: 20px; /* Added space between sections on small screens */
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+.footer-section ul li:hover {
+    color: #333;
+}
+
+/* Subscribe Section */
+.subscribe-input {
+    display: flex;
+    margin-top: 15px; /* Increased margin for better spacing */
+    flex-direction: column;
+}
+
+.subscribe-input input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    flex: 1;
+    font-size: 14px;
+    border-radius: 4px 0 0 4px;
+    outline: none; /* Removed default focus outline */
+}
+
+.subscribe-input button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.subscribe-input button:hover {
+    background-color: #45a049;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    margin-top: 40px; /* Increased margin to give more breathing room */
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px; /* Set a max width */
+    margin: 0 auto; /* Center the content */
+    flex-wrap: wrap;
+}
+.social-icons i {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    
+    margin: 10px;
+}
+
+.social-icons i:hover {
+    color: #4CAF50;
+}
+
+/* Copyright */
+.footer-copyright {
+    flex: 1;
+    font-size: 12px;
+    color: #666;
+    margin-top: 20px; /* Added margin-top for space on smaller screens */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px; /* Adjusted margin for small screens */
+    }
+
+    .footer-info,
+    .social-icons {
+        margin-bottom: 20px; /* Added spacing between elements */
+    }
+
+    .footer-copyright {
+        text-align: center;
+        margin-top: 10px;
+    }
+}

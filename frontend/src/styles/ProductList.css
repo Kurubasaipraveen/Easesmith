@@ -1,0 +1,167 @@
+/* Product List Section */
+.product-list {
+    width: 100%;
+    padding: 20px;
+}
+.column-filter-plants{
+    display: flex;
+    flex-direction: row;
+}
+.first{
+    background-color: #2f4f2f;
+    padding: 10px;
+    margin: 10px;
+    color: #fff;
+    width: 90px;
+    height: 40px;
+    font-size: 16px;
+}
+.second{
+    background-color: transparent;
+    font-size: 16px;
+    width: 90px;
+    height: 40px;
+    
+    margin: 10px;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.product-header {
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 350px;
+}
+
+.sort-by {
+    padding: 5px;
+    border: 1px solid #ccc;
+    color: #fff;
+    font-size: 20px;
+    background-color:#2f4f2f;
+}
+
+/* Products Grid - Flexbox Layout */
+.products-grid {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* Product Card - Exact 3 items per row */
+.product-card {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    width: 268px; /* Ensures 3 cards per row */
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.border {
+    width: 120%; /* Full width within the product card */
+    height: 289px; /* Consistent height for the images */
+    overflow: hidden; /* Ensures no overflow */
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+}
+
+.border img {
+    width: 235px;
+    height: 246px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    color: #2f4f2f;
+    margin: 10px 0;
+    align-items:flex-start;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.rating span {
+    font-size: 14px;
+    color: #ffcc00;
+    align-items: flex-start;
+}
+
+.price-section {
+    margin: 10px 0;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+.discounted-price {
+    font-size: 18px;
+    color: #2f4f2f;
+    font-weight: bold;
+}
+
+.view-product-btn {
+    background-color: #2f4f2f;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-to-cart-btn {
+    background-color: #2f4f2f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buy-on-rent-btn {
+    background-color: transparent;
+    color: green;
+}
+
+.nursery-section {
+    margin-bottom: 30px;
+}
+
+.nursery-grid {
+    display: flex;
+    gap: 35px;
+    margin-left: 20px;
+}
+
+.nursery-card {
+    text-align: center;
+    width: 150px;
+}
+
+.nursery-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.last-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
