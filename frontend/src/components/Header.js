@@ -38,11 +38,11 @@ function Header() {
         {/* Navigation Links */}
         <nav className="nav-links">
           <Link to="/">Home</Link>
-          <Link to="/" className='orange'>Plants & Pots</Link>
+          <a href="/" className='orange'>Plants & Pots</a>
           <div className="dropdown">
             <Link to="/tools">Tools<i className="bi bi-chevron-compact-down"></i></Link>
             <div className="dropdown-content">
-              <Link to="/tools/item1">Item 1</Link>
+              <Link>Item 1</Link>
               <Link to="/tools/item2">Item 2</Link>
             </div>
           </div>
@@ -51,7 +51,7 @@ function Header() {
           <Link to="/story">Our Story</Link>
           <Link to="/faqs">FAQs</Link>
         </nav>
-        
+
         {/* Profile and Cart Icons */}
         <div className="profile-cart">
           <div className='row-one'>
@@ -61,7 +61,6 @@ function Header() {
           <div className='row-one'>
             <Link to="/cart" className="cart-link">
               <i className="bi bi-cart"></i>
-              {/* Display the number of items in the cart */}
               {cartItemCount > 0 && <span className="cart-count">{cartItemCount}</span>}
             </Link>
             <span>Cart</span>
