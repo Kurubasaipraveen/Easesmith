@@ -18,7 +18,7 @@ const ThankYou = ({ onClose }) => {
         <h2>Order Placed!</h2>
         
         <img 
-          src="https://res.cloudinary.com/dyutmmnia/image/upload/v1729312625/cogkewer4hcv6ns8ccwy.png" // Replace with actual image URL
+          src="https://res.cloudinary.com/dyutmmnia/image/upload/v1729312625/cogkewer4hcv6ns8ccwy.png" 
           alt="Plant"
           className="order-placed-img"
         />

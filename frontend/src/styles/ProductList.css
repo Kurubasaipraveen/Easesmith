@@ -1,7 +1,7 @@
-/* Product List Section */
 .product-list {
     width: 100%;
     padding: 20px;
+   
 }
 .column-filter-plants{
     display: flex;
@@ -27,6 +27,7 @@
 .buttons {
     display: flex;
     flex-direction: row;
+    margin-left: 20px;
 }
 
 .product-header {
@@ -41,31 +42,29 @@
     color: #fff;
     font-size: 20px;
     background-color:#2f4f2f;
+    margin-left: 10px;
 }
-
-/* Products Grid - Flexbox Layout */
 .products-grid {
     display: flex;
     gap: 60px;
     flex-wrap: wrap;
 }
 
-/* Product Card - Exact 3 items per row */
 .product-card {
     border-radius: 10px;
     padding: 20px;
     text-align: center;
     background-color: white;
-    width: 268px; /* Ensures 3 cards per row */
+    width: 268px;
     min-height: 400px;
     display: flex;
     flex-direction: column;
 }
 
 .border {
-    width: 120%; /* Full width within the product card */
-    height: 289px; /* Consistent height for the images */
-    overflow: hidden; /* Ensures no overflow */
+    width: 120%; 
+    height: 289px; 
+    overflow: hidden; 
     margin-bottom: 15px;
     border: 1px solid #e0e0e0;
 }
@@ -86,7 +85,9 @@
     font-size: 14px;
     color: #666;
 }
-
+p{
+    margin-left: 20px;
+}
 .rating span {
     font-size: 14px;
     color: #ffcc00;
@@ -139,25 +140,44 @@
 }
 
 .nursery-section {
-    margin-bottom: 30px;
+    margin-top: 2rem;
+    margin-left: 20px;
 }
 
 .nursery-grid {
     display: flex;
-    gap: 35px;
-    margin-left: 20px;
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    gap: 16px; 
+    padding-bottom: 1rem;
 }
-
 .nursery-card {
+    flex: 0 0 auto; 
+    width: 200px;
+    scroll-snap-align: start;
+    border-radius: 8px;
+    padding: 1rem;
     text-align: center;
-    width: 150px;
 }
 
-.nursery-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
+.nursery-grid {
+    scroll-behavior: smooth;
 }
+.nursery-card img {
+    width: 50%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.nursery-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.nursery-grid {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
 
 .last-btn{
     display: flex;

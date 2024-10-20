@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/ProductList.css';
 import Filters from './Filter';
-import CartPage from './CartModel'; // Make sure this component is correctly implemented
+import CartPage from './CartModel'; 
 
 const ProductList = () => {
     const navigate = useNavigate();
@@ -10,31 +10,31 @@ const ProductList = () => {
     const thankyou = () => {
         navigate('./thanks');
     };
-
+//  when user click on the add to cart the model should be open to reconfirm the product add to cart
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
 
-    const [cart, setCart] = useState([]); 
-
+    const [ setCart] = useState([]); 
+// open the model 
     const openModal = (product) => {
         setSelectedProduct(product);
         setIsModalOpen(true);
     };
-
+// close the model
     const closeModal = () => {
         setIsModalOpen(false);
         setSelectedProduct(null);
     };
-
+// add to cart
     const addToCart = () => {
         if (selectedProduct) {
-            setCart((prevCart) => [...prevCart, selectedProduct]); // Add product to cart
+            setCart((prevCart) => [...prevCart, selectedProduct]); 
             console.log(`${selectedProduct.name} added to cart!`);
         }
         closeModal();
     };
 
-    // Sample product data
+    // product data
     const products = [
         {
           id: 1,
@@ -43,7 +43,7 @@ const ProductList = () => {
           rating: 4.9,
           originalPrice: 359,
           discountedPrice: 299,
-          imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303663/b6hamfzkwu0lnmzv58g6.png', // Replace with the correct image path
+          imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303663/b6hamfzkwu0lnmzv58g6.png', 
         },
         {
           id: 2,
@@ -52,7 +52,7 @@ const ProductList = () => {
           rating: 4.9,
           originalPrice: 359,
           discountedPrice: 299,
-          imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303662/twyn1jtbenhtbnnjguo8.png', // Replace with the correct image path
+          imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303662/twyn1jtbenhtbnnjguo8.png',
         },
         {
             id: 3,
@@ -61,7 +61,7 @@ const ProductList = () => {
             rating: 4.9,
             originalPrice: 359,
             discountedPrice: 299,
-            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303656/ptxdmop4wepzaloormio.png', // Replace with the correct image path
+            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303656/ptxdmop4wepzaloormio.png',
           },
           {
             id: 4,
@@ -70,7 +70,7 @@ const ProductList = () => {
             rating: 4.9,
             originalPrice: 359,
             discountedPrice: 299,
-            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303663/b6hamfzkwu0lnmzv58g6.png', // Replace with the correct image path
+            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303663/b6hamfzkwu0lnmzv58g6.png',
           },
           {
             id: 5,
@@ -79,7 +79,7 @@ const ProductList = () => {
             rating: 4.9,
             originalPrice: 359,
             discountedPrice: 299,
-            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303662/twyn1jtbenhtbnnjguo8.png', // Replace with the correct image path
+            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303662/twyn1jtbenhtbnnjguo8.png', 
           },
           {
             id: 6,
@@ -88,7 +88,7 @@ const ProductList = () => {
             rating: 4.9,
             originalPrice: 359,
             discountedPrice: 299,
-            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303656/ptxdmop4wepzaloormio.png', // Replace with the correct image path
+            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303656/ptxdmop4wepzaloormio.png',
           },
           {
             id: 7,
@@ -97,7 +97,7 @@ const ProductList = () => {
             rating: 4.9,
             originalPrice: 359,
             discountedPrice: 299,
-            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303663/b6hamfzkwu0lnmzv58g6.png', // Replace with the correct image path
+            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303663/b6hamfzkwu0lnmzv58g6.png', 
           },
           {
             id: 8,
@@ -106,7 +106,7 @@ const ProductList = () => {
             rating: 4.9,
             originalPrice: 359,
             discountedPrice: 299,
-            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303662/twyn1jtbenhtbnnjguo8.png', // Replace with the correct image path
+            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303662/twyn1jtbenhtbnnjguo8.png', 
           },{
             id: 9,
             name: 'Monstera',
@@ -114,52 +114,67 @@ const ProductList = () => {
             rating: 4.9,
             originalPrice: 359,
             discountedPrice: 299,
-            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303656/ptxdmop4wepzaloormio.png', // Replace with the correct image path
+            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303656/ptxdmop4wepzaloormio.png',
           },
           
         
       ];
-    
+    // nursery data
       const nurseries = [
         {
           id: 1,
-          description: 'Lorem ipsum dolor sit amet. Aut ipsam illum et nostrum   ',
-          imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303047/bbbyisdmjr37eyqhmfgl.png', // Replace with the correct image path
+          description: 'Lorem ipsum dolor sitamet. Aut ipsam illum et nostrum   ',
+          imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303047/bbbyisdmjr37eyqhmfgl.png',
         },
         {
           id: 2,
           description: 'Lorem ipsum dolor sit amet. Aut ipsam illum et nostrum   ',
-          imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303120/b57gmhqbvm7tvq4ot7qn.png', // Replace with the correct image path
+          imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303120/b57gmhqbvm7tvq4ot7qn.png', 
         },
         {
           id: 3,
           description: 'Lorem ipsum dolor sit amet. Aut ipsam illum et nostrum   ',
-          imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303127/m8afy8wymd8blzs7fxbq.png', // Replace with the correct image path
+          imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303127/m8afy8wymd8blzs7fxbq.png', 
         },
         {
           id: 4,
           description: 'Lorem ipsum dolor sit amet. Aut ipsam illum et nostrum   ',
-          imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303127/qepwej0rg0n6wochhh3f.png', // Replace with the correct image path
+          imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303127/qepwej0rg0n6wochhh3f.png', 
         },
         {
           id: 5,
           description: 'Lorem ipsum dolor sit amet. Aut ipsam illum et nostrum   ',
-          imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303047/bbbyisdmjr37eyqhmfgl.png', // Replace with the correct image path
+          imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303047/bbbyisdmjr37eyqhmfgl.png', 
         },
-        {
+          {
             id: 6,
             description: 'Lorem ipsum dolor sit amet. Aut ipsam illum et nostrum   ',
-            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303127/m8afy8wymd8blzs7fxbq.png', // Replace with the correct image path
+            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303127/m8afy8wymd8blzs7fxbq.png', 
           },
           {
             id: 7,
             description: 'Lorem ipsum dolor sit amet. Aut ipsam illum et nostrum   ',
-            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303127/qepwej0rg0n6wochhh3f.png', // Replace with the correct image path
+            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303127/qepwej0rg0n6wochhh3f.png', 
           },
           {
-            id: 8,
+            id: 6,
             description: 'Lorem ipsum dolor sit amet. Aut ipsam illum et nostrum   ',
-            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303047/bbbyisdmjr37eyqhmfgl.png', // Replace with the correct image path
+            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303127/m8afy8wymd8blzs7fxbq.png', 
+          },
+          {
+            id: 7,
+            description: 'Lorem ipsum dolor sit amet. Aut ipsam illum et nostrum   ',
+            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303127/qepwej0rg0n6wochhh3f.png', 
+          },
+          {
+            id: 6,
+            description: 'Lorem ipsum dolor sit amet. Aut ipsam illum et nostrum   ',
+            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303127/m8afy8wymd8blzs7fxbq.png', 
+          },
+          {
+            id: 7,
+            description: 'Lorem ipsum dolor sit amet. Aut ipsam illum et nostrum   ',
+            imageUrl: 'https://res.cloudinary.com/dyutmmnia/image/upload/v1729303127/qepwej0rg0n6wochhh3f.png', 
           },
       ];
 
@@ -169,7 +184,8 @@ const ProductList = () => {
                 <button className='first'>Plants</button>
                 <button className='second'>Pots</button>
             </div>
-            <p>Lorem ipsum dolor sit amet...</p>
+            <p>Lorem ipsum dolor sit amet. Aut ipsam illum et nostrum quidem aut necessitatibus enim ut internos accusantium a numquam autem ab rerum omnis.<br/>Non molestiae ratione et laborum doloribus aut molestiae voluptates ut porro excepturi sit molestiae obcaecati qui quis beatae est voluptatem eius. Et <br/>architecto nihil id labore omnis hic iste deleniti et porro aspernatur.</p>
+      {/* nursery section  */}
             <div className="nursery-section">
                 <h2>Nursery</h2>
                 <div className="nursery-grid">
@@ -182,16 +198,18 @@ const ProductList = () => {
                     ))}
                 </div>
             </div>
-
+{/* sorting producets */}
             <div className="product-header">
                 <span>{products.length} products</span>
                 <select className="sort-by">
-                    <option>Sort by</option>
+                    <option >Sort by</option>
+                    <option>Size</option>
                     <option>Popularity</option>
                     <option>Price: Low to High</option>
                     <option>Price: High to Low</option>
                 </select>
             </div>
+            {/* produce section both footer and products */}
             <div className='column-filter-plants'>
                 <div className='filter-row'>
                     <Filters />

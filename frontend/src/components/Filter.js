@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/Filter.css"; // Import the CSS file
+import "../styles/Filter.css"; 
 
 const Filters = () => {
   const [filters] = useState([

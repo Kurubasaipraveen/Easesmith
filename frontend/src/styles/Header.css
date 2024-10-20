@@ -1,13 +1,9 @@
-/* Header.css */
-
-/* General header styling */
 .header {
   width: 100%;
   border-bottom: 1px solid #e0e0e0;
   font-family: Arial, sans-serif;
 }
 
-/* Top bar styling */
 .header-top {
   display: flex;
   justify-content: center;
@@ -40,14 +36,18 @@ li{
   color: #fff;
 }
 
-/* Main header section */
 .header-main {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px;
   background-color: #fff;
+  margin-left: 20px;
 }
+.profile-cart,i{
+  font-size: 20px;
+}
+
 
 .logo {
   display: flex;
@@ -83,6 +83,7 @@ li{
   font-size: 16px;
 }
 
+
 .nav-links a:hover {
   color: #ffa500;
 }
@@ -109,24 +110,21 @@ li{
   text-decoration: none;
   color: #333;
 }
-
-/* Search Bar Styling */
-/* Search Bar Styling */
 .search-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 0; /* Add some vertical spacing */
+  margin: 20px 0; 
 }
 
 .search-bar input {
   padding: 10px;
-  border: none; /* Remove the border entirely */
-  border-bottom: 1px solid #ccc; /* Add underline only under the input */
-  border-radius: 25px 25px 0 0; /* Round the top edges only */
+  border: none; 
+  border-bottom: 1px solid #ccc;
+  border-radius: 25px 25px 0 0; 
   font-size: 16px;
-  padding-left: 40px; /* Space for the left icon */
-  padding-right: 40px; /* Space for the right icon */
+  padding-left: 40px; 
+  padding-right: 40px; 
   outline: none;
   
 }
@@ -142,12 +140,9 @@ li{
 }
 
 .search-bar input:focus {
-  outline: none; /* Ensure no outline is shown when input is focused */
-  border-bottom: 1px solid #333; /* Optional: change color of underline on focus */
+  outline: none; 
+  border-bottom: 1px solid #333;
 }
-
-
-/* Profile and Cart Styling */
 .profile-cart {
   display: flex;
   align-items: center;

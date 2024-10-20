@@ -2,6 +2,15 @@ import React from 'react';
 import '../styles/Footer.css'; // Link to the CSS file
 
 const Footer = () => {
+  
+  // this function used when user in footer section i provide Arrow for going to top when click on that page show show the top version 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -64,17 +73,30 @@ const Footer = () => {
         <div className="social-icons">
           <p>Follow us on</p>
           <div className="icons">
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-threads-fill"></i>
-            <i class="bi bi-youtube"></i>
-            <i class="bi bi-linkedin"></i>
+            <i className="bi bi-instagram"></i>
+            <i className="bi bi-facebook"></i>
+            <i className="bi bi-threads-fill"></i>
+            <i className="bi bi-youtube"></i>
+            <i className="bi bi-linkedin"></i>
           </div>
         </div>
 
         <div className="footer-copyright">
           <p>© 2023, chaperone.com All rights reserved.</p>
         </div>
+      </div>
+      {/* in this when whatsapp and arrow icons position is fixed when scrolling the page  */}
+      <div className="control-icon">
+        <img 
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeHq-vaUK8MlOy8sPlCE5cHlSF9w7jUJ6YDQ&s" 
+          alt="whatsapp" 
+          className="whatsapp"
+        />
+        <i 
+          className="bi bi-arrow-up-circle-fill" 
+          onClick={scrollToTop} 
+          style={{ cursor: 'pointer' }}  
+        ></i>
       </div>
     </footer>
   );
