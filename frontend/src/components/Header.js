@@ -38,7 +38,7 @@ function Header() {
         {/* Navigation Links */}
         <nav className="nav-links">
           <Link to="/">Home</Link>
-          <Link to="/">Plants & Pots</Link>
+          <Link to="/" className='orange'>Plants & Pots</Link>
           <div className="dropdown">
             <Link to="/tools">Tools<i className="bi bi-chevron-compact-down"></i></Link>
             <div className="dropdown-content">
