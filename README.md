@@ -41,3 +41,5 @@ both product and filter cart for display as column
 
 footer
 The Footer component of your project will serve as an essential section at the bottom of each page, providing users with key information and links. It will feature company information, including the "Chaperone Plants" logo, a brief description emphasizing the brand’s mission of nurturing a greener future, and contact details such as a phone number and email address. Additionally, the footer will include customer support links to FAQs, shipping information, and return policies, ensuring users can easily find assistance. Social media icons will link to platforms like Instagram and Facebook, promoting community engagement. For added functionality, a newsletter signup section can encourage users to subscribe for updates. Overall, the footer enhances the user experience by offering crucial navigation and fostering brand connection.
+
+![image alt](https://github.com/Kurubasaipraveen/Easesmith/blob/1e6bbedbbd71dcb2ecd7d0fcabbb1cd014815118/frontend/screencapture-easesmith-mu-vercel-app-2024-10-23-07_26_41.png)
